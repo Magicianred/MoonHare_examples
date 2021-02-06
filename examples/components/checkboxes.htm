@@ -7,16 +7,232 @@
 
     <!-- MooHare.CSS -->
     <link href="../../css/moonhare.css" rel="stylesheet">
+    <style>
+        /* TO REMOVE AFTER .border style external class is implemented */
+        .border {
+            border: 1px solid lightgray;
+        }
+
+        .checked {
+          background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+            url("data:image/svg+xml,#{$dark-selected-overlay-image}");
+        }
+        .indeterminate {
+          background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+            url("data:image/svg+xml,#{$dark-selected-overlay-image}");
+        }
+
+        .checked .hover {
+          background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+            url("data:image/svg+xml,#{$dark-hover-overlay-image}");
+        }
+        .indeterminate .hover {
+          background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+            url("data:image/svg+xml,#{$dark-hover-overlay-image}");
+        }
+
+        .checked .focus {
+          background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+            url("data:image/svg+xml,#{$dark-focus-overlay-image}");
+        }
+        .indeterminate .focus {
+          background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+            url("data:image/svg+xml,#{$dark-focus-overlay-image}");
+        }
+
+        .checked .active {
+          background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+            url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
+        }
+        .indeterminate .active {
+          background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+            url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
+        }
+
+        .light-effect .checked {
+            background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
+              url("data:image/svg+xml,#{$light-selected-overlay-image}");
+          }
+          .light-effect .indeterminate {
+            background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
+              url("data:image/svg+xml,#{$light-selected-overlay-image}");
+          }
+
+          .light-effect .checked .hover {
+            background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
+              url("data:image/svg+xml,#{$light-hover-overlay-image}");
+          }
+          .light-effect .indeterminate .hover {
+            background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
+              url("data:image/svg+xml,#{$light-hover-overlay-image}");
+          }
+
+          .light-effect .checked .focus {
+            background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
+              url("data:image/svg+xml,#{$light-focus-overlay-image}");
+          }
+          .light-effect .indeterminate .focus {
+            background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
+              url("data:image/svg+xml,#{$light-focus-overlay-image}");
+          }
+
+          .light-effect .checked .active {
+            background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
+              url("data:image/svg+xml,#{$light-pressed-overlay-image}");
+          }
+          .light-effect .indeterminate .active {
+            background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
+              url("data:image/svg+xml,#{$light-pressed-overlay-image}");
+          }
+    </style>
+    <style>
+        .row {
+            margin-bottom: 1em;
+        }
+    </style>
 
     <title>MoonHare examples - components - checkboxes</title>
   </head>
   <body>
     <div id="container">
         <h1>Checkboxes - components - MoonHare</h1>
+        <h1>Grid - core - MoonHare</h1>
         <p>
-            [TO DO - not yet implemented]
             <a href="../index.htm">return to index</a>
         </p>
+        <p>
+          [TO DO - working in progress]
+        </p>
+        <div class="container">
+          <h2>
+            Checkboxs checked / unchecked
+          </h2>
+          <div class="row">
+              <div class="col">
+                <input class="checkbox" type="checkbox" checked />
+              </div>
+              <div class="col">
+                <input class="checkbox" type="checkbox" />
+              </div>
+          </div>
+        </div>
+        <br /><br /><hr /><br /><br />
+        <div class="container">
+          <h2>
+            Checkboxs all status
+          </h2>
+          <div class="row">
+              <div class="col">
+                <div>Enabled</div>
+                <div>Selected</div>
+                <div>
+                  <input class="checkbox active" type="checkbox" checked />
+                </div>
+              </div>
+              <div class="col">
+                <div>Disabled</div>
+                <div>Selected</div>
+                <div>
+                  <input class="checkbox" type="checkbox" checked disabled />
+                </div>
+              </div>
+              <div class="col">
+                <div>Hover</div>
+                <div>Selected</div>
+                <div>
+                  <input class="checkbox active hover" type="checkbox" checked />
+                </div>
+              </div>
+              <div class="col">
+                <div>Focus</div>
+                <div>Selected</div>
+                <div>
+                  <input class="checkbox active focus" type="checkbox" checked />
+                </div>
+              </div>
+              <div class="col">
+                <div>Pressed</div>
+                <div>Selected</div>
+                <div>
+                  <input class="checkbox active" type="checkbox" checked />
+                </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <div>Enabled</div>
+                <div>Unselected</div>
+                <div>
+                  <input class="checkbox" type="checkbox" />
+                </div>
+              </div>
+              <div class="col">
+                <div>Disabled</div>
+                <div>Unselected</div>
+                <div>
+                  <input class="checkbox" type="checkbox" disabled />
+                </div>
+              </div>
+              <div class="col">
+                <div>Hover</div>
+                <div>Unselected</div>
+                <div>
+                  <input class="checkbox hover" type="checkbox" />
+                </div>
+              </div>
+              <div class="col">
+                <div>Focus</div>
+                <div>Unselected</div>
+                <div>
+                  <input class="checkbox focus" type="checkbox" />
+                </div>
+              </div>
+              <div class="col">
+                <div>Pressed</div>
+                <div>Unselected</div>
+                <div>
+                  <input class="checkbox" type="checkbox" />
+                </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <div>Enabled</div>
+                <div>Indeterminate</div>
+                <div>
+                  <input class="checkbox indeterminate" type="checkbox" />
+                </div>
+              </div>
+              <div class="col">
+                <div>Disabled</div>
+                <div>Indeterminate</div>
+                <div>
+                  <input class="checkbox indeterminate" type="checkbox" disabled />
+                </div>
+              </div>
+              <div class="col">
+                <div>Hover</div>
+                <div>Indeterminate</div>
+                <div>
+                  <input class="checkbox indeterminate hover" type="checkbox" />
+                </div>
+              </div>
+              <div class="col">
+                <div>Focus</div>
+                <div>Indeterminate</div>
+                <div>
+                  <input class="checkbox indeterminate focus" type="checkbox" />
+                </div>
+              </div>
+              <div class="col">
+                <div>Pressed</div>
+                <div>Indeterminate</div>
+                <div>
+                  <input class="checkbox indeterminate" type="checkbox" />
+                </div>
+              </div>
+          </div>
+        </div>
     </div>
   </body>
 </html>
